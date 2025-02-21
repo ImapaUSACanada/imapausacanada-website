@@ -1,0 +1,65 @@
+.landingContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/landingImg.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contentBox {
+    position: relative;
+    color: white;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    margin-top: 16px;
+    max-width: 600px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    color: antiquewhite;
+}
+
+.button {
+    margin-top: 24px;
+    background-color: #7acdf0;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #5cbce4;
+}
