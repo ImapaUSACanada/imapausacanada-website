@@ -1,17 +1,25 @@
+/* Navbar container */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 15px;
     background-color: #333;
     color: white;
+    position: fixed; /* Keeps navbar fixed at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+/* Logo styling */
+.logo img {
+    height: 75px; /* Adjust logo size */
+    cursor: pointer; /* Makes it clear it's clickable */
 }
 
+/* Navigation links */
 .navLinks {
     list-style: none;
     display: flex;
@@ -25,9 +33,15 @@
 .navLinks a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    transition: color 0.3s ease;
 }
 
+.navLinks a:hover {
+    color: #ffcc00; /* Changes color on hover */
+}
+
+/* Mobile menu button */
 .menuButton {
     display: none;
     background: none;
@@ -37,10 +51,25 @@
     cursor: pointer;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
     .navLinks {
-        display: none;
+        display: none; /* Hidden by default on small screens */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Push below navbar */
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
     }
+
+    /* Shows the menu when active */
+    .navLinks.show {
+        display: flex;
+    }
+
     .menuButton {
         display: block;
     }

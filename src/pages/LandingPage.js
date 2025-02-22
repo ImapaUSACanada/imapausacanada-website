@@ -1,5 +1,6 @@
 import styles from './LandingPage.module.css';
 
+
 function LandingPage() {
     return (
         <div className={styles.landingContainer}>
@@ -8,13 +9,12 @@ function LandingPage() {
 
             <div className={styles.contentBox}>
                 <h1 className={styles.title}>
-                    "Empowering Connections, Building Futures"
+                    IMAPA USA-Canada
                 </h1>
                 <p className={styles.subtitle}>
-                    Join IMAPA USA Canada and be part of a thriving community
-                    where opportunities, ideas, and success come together.
+                    Ikatan Mahasiswa/i Papua di USA & Canda.
                 </p>
-                <button className={styles.button}>Get Started</button>
+
             </div>
         </div>
     );
