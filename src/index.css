@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset Styles */
 * {
     margin: 0;
@@ -89,4 +90,114 @@ button:hover {
     p {
         font-size: 0.9rem;
     }
+=======
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('../public/background.jpg') no-repeat center center/cover;
+  color: white;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 10;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-right: 50px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f4a261; /* Light orange for hover effect */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 70px; /* To prevent overlap with fixed header */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay to improve text readability */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .hero-text h1 {
+      font-size: 36px;
+  }
+
+  .hero-text p {
+      font-size: 18px;
+  }
+>>>>>>> eabc939 (Updated HomePage with UI)
 }
