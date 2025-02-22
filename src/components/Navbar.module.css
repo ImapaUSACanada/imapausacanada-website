@@ -3,20 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background-color: #333;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    position: fixed; /* Keeps navbar fixed at top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 2;
 }
 
 /* Logo styling */
 .logo img {
-    height: 75px; /* Adjust logo size */
-    cursor: pointer; /* Makes it clear it's clickable */
+    height: 75px;
+    cursor: pointer;
 }
 
 /* Navigation links */
@@ -38,7 +38,7 @@
 }
 
 .navLinks a:hover {
-    color: #ffcc00; /* Changes color on hover */
+    color: #ffcc00;
 }
 
 /* Mobile menu button */
@@ -54,18 +54,17 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .navLinks {
-        display: none; /* Hidden by default on small screens */
+        display: none;
         flex-direction: column;
         background-color: #333;
         position: absolute;
-        top: 60px; /* Push below navbar */
+        top: 60px;
         right: 0;
         width: 100%;
         padding: 10px 0;
         text-align: center;
     }
 
-    /* Shows the menu when active */
     .navLinks.show {
         display: flex;
     }
