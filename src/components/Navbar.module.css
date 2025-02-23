@@ -3,19 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3; /* Increased z-index to keep it above other elements */
+    padding: 0.75rem 1.5rem;
 }
 
 /* Logo styling */
 .logo img {
-    height: 75px;
+    height: 4.5rem;
     cursor: pointer;
 }
 
@@ -23,8 +20,7 @@
 .navLinks {
     list-style: none;
     display: flex;
-    gap: 20px;
-    padding-right: 25px;
+    gap: 1.25rem;
 }
 
 .navLinks li {
@@ -34,7 +30,7 @@
 .navLinks a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
@@ -47,30 +43,46 @@
     display: none;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 2rem; /* Made it bigger */
     color: white;
     cursor: pointer;
+    z-index: 4; /* Ensures the button is above everything */
 }
 
-/* Mobile styles */
+/* Full-screen mobile menu */
 @media (max-width: 768px) {
     .navLinks {
         display: none;
         flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
+        background-color: rgba(
+            0,
+            0,
+            0,
+            0.9
+        ); /* Darker background for better visibility */
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        padding: 10px 0;
-        text-align: center;
+        height: 100vh; /* Full-screen menu */
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
     }
 
     .navLinks.show {
         display: flex;
     }
 
+    .navLinks a {
+        font-size: 2rem; /* Increased size for easier clicking */
+        padding: 1rem;
+    }
+
     .menuButton {
         display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1.5rem;
     }
 }
