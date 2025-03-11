@@ -31,6 +31,11 @@ function Navbar() {
                         Departments
                     </a>
                 </li>
+                <li>
+                    <a href='#events' onClick={() => setMenuOpen(false)}>
+                        Events
+                    </a>
+                </li>
             </ul>
             <button className={styles.menuButton} onClick={toggleMenu}>
                 {menuOpen ? '✖' : '☰'}
