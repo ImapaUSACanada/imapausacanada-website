@@ -11,8 +11,9 @@ function LandingPage() {
                     "Empowering Connections, Building Futures!"
                 </h1>
                 <p className={styles.subtitle}>
-                    Join IMAPA USA Canada and be part of a thriving community
-                    where opportunities, ideas, and success come together.
+                    Join IMAPA USA Canasdfasdfasdfada and be part of a thriving
+                    community where opportunities, ideas, and success come
+                    together.
                 </p>
                 <button className={styles.button}>Get Started</button>
             </div>
