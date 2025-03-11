@@ -8,7 +8,7 @@ function LandingPage() {
 
             <div className={styles.contentBox}>
                 <h1 className={styles.title}>
-                    "Empowering Connections, Building Futures"
+                    "Empowering Connections, Building Futures!"
                 </h1>
                 <p className={styles.subtitle}>
                     Join IMAPA USA Canada and be part of a thriving community
