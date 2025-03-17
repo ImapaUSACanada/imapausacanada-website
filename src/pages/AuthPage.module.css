@@ -1,0 +1,152 @@
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    padding: 1rem;
+}
+
+/* Auth Box */
+.authBox {
+    width: 90%;
+    max-width: 37.5rem; /* 600px */
+    background: white;
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Sliding container for DESKTOP */
+.slider {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide Animations (for Desktop) */
+.slideRight {
+    transform: translateX(0);
+}
+
+.slideLeft {
+    transform: translateX(-50%);
+}
+
+/* Form */
+.form {
+    width: 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+/* Options (Remember me & Forgot password) */
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Remember me checkbox */
+.rememberCheckbox {
+    display: flex;
+    align-items: center;
+}
+
+.rememberCheckbox input {
+    width: fit-content;
+    margin-right: 0.5rem;
+}
+
+/* Links */
+.options a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    background: linear-gradient(90deg, #6dd5ed, #2193b0);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Toggle button */
+.toggleBtn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* 🚀 MOBILE RESPONSIVENESS 🚀 */
+@media (max-width: 640px) {
+    .authBox {
+        width: 100%;
+        max-width: 24rem; /* 380px */
+    }
+
+    /* Remove slide effect & replace with fade animation */
+    .slider {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+
+    .form {
+        width: 100%;
+        padding: 1.5rem;
+        position: absolute;
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .form.active {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rememberCheckbox {
+        margin-bottom: 0.5rem;
+    }
+}
