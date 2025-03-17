@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
+import { Link } from 'react-router';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -11,31 +12,26 @@ function Navbar() {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-                <a href='/'>
+                <Link to='/' onClick={() => setMenuOpen(false)}>
                     <img src='/logo.webp' alt='IMAPA USA-Canada Logo' />
-                </a>
+                </Link>
             </div>
             <ul className={`${styles.navLinks} ${menuOpen ? styles.show : ''}`}>
-                <li>
-                    <a href='#about' onClick={() => setMenuOpen(false)}>
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href='#contact' onClick={() => setMenuOpen(false)}>
-                        Contact
-                    </a>
-                </li>
-                <li>
-                    <a href='#departments' onClick={() => setMenuOpen(false)}>
-                        Departments
-                    </a>
-                </li>
-                <li>
-                    <a href='#events' onClick={() => setMenuOpen(false)}>
-                        Events
-                    </a>
-                </li>
+                <Link to='/about' onClick={() => setMenuOpen(false)}>
+                    About
+                </Link>
+                <Link to='/contact' onClick={() => setMenuOpen(false)}>
+                    Contact
+                </Link>
+                <Link to='/departments' onClick={() => setMenuOpen(false)}>
+                    Departments
+                </Link>
+                <Link to='/events' onClick={() => setMenuOpen(false)}>
+                    Events
+                </Link>
+                <Link to='/auth' onClick={() => setMenuOpen(false)}>
+                    Login
+                </Link>
             </ul>
             <button className={styles.menuButton} onClick={toggleMenu}>
                 {menuOpen ? '✖' : '☰'}
